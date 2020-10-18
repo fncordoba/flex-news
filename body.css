@@ -1,0 +1,117 @@
+body{
+	margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: black;
+    color: blanchedalmond;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+}
+
+.asideimg{
+    width: 100%;
+    height: auto;
+    border:solid 0px #1135c2;
+    -moz-border-radius-topleft: 75px;
+    -moz-border-radius-topright:75px;
+    -moz-border-radius-bottomleft:75px;
+    -moz-border-radius-bottomright:75px;
+    -webkit-border-top-left-radius:75px;
+    -webkit-border-top-right-radius:75px;
+    -webkit-border-bottom-left-radius:75px;
+    -webkit-border-bottom-right-radius:75px;
+    border-top-left-radius:75px;
+    border-top-right-radius:75px;
+    border-bottom-left-radius:75px;
+    border-bottom-right-radius:75px;   
+}
+
+.wzlogo, .bplogo{
+    width: 100%;
+}
+
+.news-center{
+    width: 50%;
+    padding: 10px;
+    background-color: #052d73;
+}
+
+.news-center h2{
+    margin-bottom: 5px;
+    border-top: solid black;
+    border-bottom: solid black;
+}
+
+.news-center p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+.news-center a{
+    color: black;
+    margin-bottom: 5px;
+    border-top: solid red;
+    border-bottom: solid red;
+    text-decoration: none;
+}
+
+.news-center a:hover {
+    background-color: gold;
+  }
+
+#imgnews1, #imgnews2, #imgnews3{
+    width: 70%;
+}
+
+#publicity, #aside{
+    width: 30%;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#aside{
+    flex-direction: column;
+    width: 20%;
+}
+
+#contacts{
+    display: flex;
+    justify-content: center;
+}
+
+#contacts img{
+    width: 20%;
+    height: auto;
+    -moz-border-radius-topleft: 75px;
+    -moz-border-radius-topright:75px;
+    -moz-border-radius-bottomleft:75px;
+    -moz-border-radius-bottomright:75px;
+    -webkit-border-top-left-radius:75px;
+    -webkit-border-top-right-radius:75px;
+    -webkit-border-bottom-left-radius:75px;
+    -webkit-border-bottom-right-radius:75px;
+    border-top-left-radius:75px;
+    border-top-right-radius:75px;
+    border-bottom-left-radius:75px;
+    border-bottom-right-radius:75px; 
+}
+
+@media (max-width: 768px) {
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
