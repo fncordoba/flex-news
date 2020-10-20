@@ -56,7 +56,7 @@ footer{
 }
 
 .news-center{
-    width: 50%;
+    width: 90%;
     padding: 10px;
     background-color: #3daeff;
 }
@@ -88,22 +88,27 @@ footer{
     width: 70%;
 }
 
-#publicity, #aside{
+#publicity{
     width: 30%;
-    margin-right: 10px;
     color: black;
     font-family: 'Permanent Marker', cursive;
     font-size: 20px;
 }
 
 #aside{
+    display: flex;
+    align-items: center;
     flex-direction: column;
-    margin-left: 5px;
-    width: 50%;
+    width: 100%;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#aside a:hover{
+    background-color: gold;
 }
 
 #secondary-news{
-    width: 80%;
+    width: 90%;
     padding: 10px;
     background-color: bisque;
 }
@@ -139,6 +144,14 @@ footer{
     .container{
         flex-direction: row;
         align-items: flex-start;
+    }
+
+    .news-center{
+        width: 50%;
+    }
+
+    #aside{
+        width: 50%;
     }
 
 }

@@ -1,6 +1,5 @@
 header{
-    display: flex;
-    justify-content: space-around;
+    display: block;
 	width: 100%;
     background: #3daeff;
 }
@@ -14,10 +13,8 @@ h1{
 }
 
 .logo{
-    width: 30%;
+    width: 10%;
     height: auto;
-    justify-content: flex-end;
-    border:solid 0px #1135c2;
     -moz-border-radius-topleft: 75px;
     -moz-border-radius-topright:75px;
     -moz-border-radius-bottomleft:75px;
@@ -87,7 +84,7 @@ h1{
 	text-decoration: none;
 }
 
-#header-div-1{
+#header-div-3{
     display: none;
 }
 
@@ -110,8 +107,18 @@ h1{
 
 @media (min-width: 768px) {
 
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
     h1{
         font-size: auto;
+    }
+
+    .logo{
+        width: 30%;
     }
     
     .menu{
@@ -139,21 +146,8 @@ h1{
         display: none;
     }
     
-    #header-div-1{
-        display: flex;
-        align-items: flex-end;
-    }
-
-    #header-div-2{
-        display: flex;
-        align-items: center;
-        width: 80%;
-    }
-
     #header-div-3{
-        display: flex;
-        align-items: flex-end;
-        width: 20%;
+        display: inline-flex;
     }
 
 }
