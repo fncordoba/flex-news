@@ -36,7 +36,7 @@ footer{
 .aside-img{
     width: 100%;
     height: auto;
-    border:solid 0px #1135c2;
+    border: solid 0px #1135c2;
     -moz-border-radius-topleft: 75px;
     -moz-border-radius-topright:75px;
     -moz-border-radius-bottomleft:75px;
@@ -100,7 +100,7 @@ footer{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    font-family: 'Permanent Marker', cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #aside a:hover{
@@ -137,6 +137,16 @@ footer{
     border-top-right-radius:75px;
     border-bottom-left-radius:75px;
     border-bottom-right-radius:75px; 
+}
+
+#footer-list a{
+    display: inline-block;
+    margin-right: 2%;
+    color: blanchedalmond;
+    border-right: groove 3px white; 
+    border-bottom: groove 3px white; 
+    border-radius: 50px;
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {
