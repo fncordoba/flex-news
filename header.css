@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    justify-content: space-around;
+	width: 100%;
+    background: #3daeff;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Permanent Marker', cursive;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: underline wavy white;
+}
+
+#header-div-search {
+    display: none;
+}
+
+#header-div-title {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+    
+    header {
+        display: inline-flex;
+        justify-content: space-around;
+        width: 100%;
+        background: #3daeff;
+        }
+    
+        h1 {
+            font-size: auto;
+        }
+
+        #header-div-search {
+            display: inline-flex;
+            justify-content: flex-start;
+            height: 40%;
+        }
+               
+}

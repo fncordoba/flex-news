@@ -1,0 +1,20 @@
+footer {
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: blanchedalmond;
+}
+
+#footer-list a {
+    display: inline-block;
+    margin-right: 2%;
+    color: blanchedalmond;
+    border-right: groove 3px white; 
+    border-bottom: groove 3px white; 
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+#contacts img {
+    margin-top: 5%;
+}

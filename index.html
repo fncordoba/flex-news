@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="header.css">
         <link rel="stylesheet" href="body.css">
         <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="footer.css">
         <link rel="stylesheet" href="normalize.css">
-        <link  rel="icon" href="page-img/favicon.ico" type="image/png" />
+        <link  rel="icon" href="img/favicon.ico" type="image/png" />
         <link href="https://fonts.googleapis.com/css?family=Chewy|Permanent+Marker&display=swap" rel="stylesheet">
         <title>Flex News</title>
     </head>
@@ -20,21 +22,19 @@
                     19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                 </svg> 
                 <input type="search" name="Search" placeholder="Search">
-                
             </div> 
+            <div id="header-div-title">
+                <h1>Flex News Weekly</h1>   
+            </div>
             <div id="header-div-date">
                 <p>
                     Oct 18, 2020
                 </p>
-            </div>    
-            <div id="header-div-title">
-                <h1>Flex News Weekly</h1>   
-            </div>
-            
+            </div> 
         </header>
         <div class="nav">
             <input type="checkbox" id="btn-menu">
-            <label for="btn-menu" class="label-menu"><img src="page-img/menu.png"></label>
+            <label for="btn-menu" class="label-menu"><img src="img/menu.png"></label>
             <nav class="menu">
                 <ul>
                     <li><a href="">Home</a></li>
@@ -50,18 +50,22 @@
         </div>    
         <div class="container">   
             <div id="publicity">
+                <div id="div-logo">
+                    <img src="img/logo.jpg" id="logo" alt="our logo">
+                </div>
                 <div id="wzlogo">
                     <h2>Our Sponsors</h2>
-                    <img src="page-img/wheyzonelogo.png"  class="wzlogo" alt="Whey zone logo">
+                    <img src="img/wheyzonelogo.png"  class="wzlogo" alt="Whey zone logo">
                 </div>
                 <div id="bplogo">
                     <h2>Be an Animal</h2>
-                    <img src="page-img/bestproteinlogo.jpg" class="bplogo" alt="Best Protein logo">
-                </div>                </div>
+                    <img src="img/bestproteinlogo.jpg" class="bplogo" alt="Best Protein logo">
+                </div>                
+            </div>
             <div class="news-center">
                 <article>
                     <h2>A ferry protein in the pancreas protects it from the stress induced by a high-fat diet</h2>
-                    <img src="article-img/protein.png" id="img-news-1" alt="protein molecule">
+                    <img src="img/protein.png" id="img-news-1" alt="protein molecule">
                     <p>
                          Scientists have now uncovered a key mechanism by which pancreatic function 
                         is maintained in response to a high-fat diet.
@@ -79,7 +83,7 @@
                 </article>
                 <article>
                     <h2>Drink coffee after breakfast, not before, for better metabolic control</h2>
-                    <img src="article-img/coffee.jpg" id="img-news-2" alt="black coffee">
+                    <img src="img/coffee.jpg" id="img-news-2" alt="black coffee">
                     <p>
                         A strong, black coffee to wake you up after a bad night's sleep could impair 
                         control of blood sugar levels, according to a new study.
@@ -89,7 +93,7 @@
                 <article>
                     <h2>New key player in long-term memory</h2>
                     <h3>Long-term memory controlled by protein synthesis in inhibitory cells</h3>
-                    <img src="article-img/neurons.jpg" id="img-news-3" alt="Neurons illustration">
+                    <img src="img/neurons.jpg" id="img-news-3" alt="Neurons illustration">
                     <p>
                         A research team has discovered that during memory consolidation, 
                         there are at least two distinct processes taking place in two different 
@@ -134,11 +138,11 @@
                 <div id="aside-gadgets">
                     <div>
                         <h3>Whather</h3>
-                        <a href="#"><img src="page-img/whather.jpg" class="aside-img" alt="whather logo"></a>
+                        <a href="#"><img src="img/whather.jpg" class="aside-img" alt="whather logo"></a>
                     </div>
                     <div>
                         <h3>The World Clock</h3>
-                        <a href="#"><img src="page-img/worldclock.jpg" class="aside-img" alt="The World Clock"></a>
+                        <a href="#"><img src="img/worldclock.jpg" class="aside-img" alt="The World Clock"></a>
                     </div>
                 </div>
             </aside>
@@ -165,12 +169,11 @@
                     <h5>Subscriptions</h5>
                 </a>
             </div>
-            <h2>Contact Us</h2>
             <div id="contacts">
-                <a href="#"><img src="page-img/twitter.png" alt="twitter logo"></a>
-                <a href="#"><img src="page-img/instagram.png" alt="instagram logo"></a>
-                <a href="#"><img src="page-img/facebook.png" alt="facebook logo"></a>
-                <a href="https://github.com/fncordoba/flex-news"><img src="page-img/github.png" alt="github logo"></a>
+                <a href="#"><img src="img/twitter.png" alt="twitter logo"></a>
+                <a href="#"><img src="img/instagram.png" alt="instagram logo"></a>
+                <a href="#"><img src="img/facebook.png" alt="facebook logo"></a>
+                <a href="https://github.com/fncordoba/flex-news"><img src="img/github.png" alt="github logo"></a>
             </div>
         </footer>
     </body>

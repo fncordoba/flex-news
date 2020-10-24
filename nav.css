@@ -1,25 +1,11 @@
-header{
-    display: block;
-	width: 100%;
-    background: #3daeff;
-}
-
-h1{
-    color: #fff;
-    font-family: 'Permanent Marker', cursive;
-    font-style: italic;
-    font-size: 16px;
-    text-decoration: underline wavy white;
-}
-
-.nav{
+.nav {
     display: flex;
     justify-content: flex-start;
     width: 100%;
     background-color: black;
 }
 
-.menu{
+.menu {
     position: absolute;
     width: 70%;
     margin-left: -70%;
@@ -28,7 +14,7 @@ h1{
     background:black;
 }
 
-.nav .label-menu{
+.nav .label-menu {
     display: block;
 	width: 30px;
 	height: 30px;
@@ -42,7 +28,7 @@ h1{
 
 }
 
-.menu ul{
+.menu ul {
     display: flex;
     flex-direction: column;
 	list-style: none;
@@ -50,95 +36,62 @@ h1{
     margin: 0;
 }
 
-.menu li{
+.menu li {
     flex-grow: 1;
     border: 1px solid #fff;
     
 }
 
-.menu li:hover{
+.menu li:hover {
 	background: rgba(0,0,0,0.3);
 }
 
-.menu li a{
+.menu li a {
 	display: block;
 	padding: 15px 20px;
 	color: #fff;
 	text-decoration: none;
 }
 
-#header-div-search{
-    display: none;
-}
-
-#header-div-title{
-    display: flex;
-    justify-content: flex-start;
-}
-
-#nav-search{
+#nav-search {
     display: flex;
     width: 100%;
 }
 
-#btn-menu{
+#btn-menu {
     display: none;
     
 }
 
-#btn-menu:checked ~ .menu{
+#btn-menu:checked ~ .menu {
     margin: 0px;
     margin-top: 50px;
 }
-
-
-
 @media (min-width: 768px) {
 
-    h1{
-        font-size: auto;
-    }
-    
-    .menu{
+    .menu {
         display: flex;
         position: relative;
         width: 100%;
         margin: 0px;
     }
 
-    .menu ul{
+    .menu ul {
         display: contents;
     }
 
-    .nav{
+    .nav {
         display: flex;
         justify-content: center;
         width: 100%;
     }
 
-    .nav .label-menu{
+    .nav .label-menu {
         display: none;
     }
     
-    #btn-menu, #nav-search{
+    #btn-menu, #nav-search {
         display: none;
-    }
-    
-    #header-div-search{
-        display: inline-flex;
-        justify-content: flex-start;
-    }
-
-    #header-div-date{
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-    }
-
-    #header-div-title{
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
 }
