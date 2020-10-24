@@ -48,24 +48,24 @@ article a {
     width: 100%;
 }
 
-.news-center {
+#news-center {
     width: 90%;
     padding: 10px;
     background-color: #3daeff;
 }
 
-.news-center h2 {
+#news-center h2 {
     margin-bottom: 5px;
     border-top: solid black;
     border-bottom: solid black;
 }
 
-.news-center p {
+#news-center p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
 }
 
-.news-center a {
+#news-center a {
     margin-bottom: 5px;
     border-top: solid red;
     border-bottom: solid red;
@@ -83,6 +83,7 @@ article a {
 
 #publicity {
     width: 30%;
+    margin-left: 2%;
     color: black;
     font-family: 'Permanent Marker', cursive;
     font-size: 20px;
@@ -138,7 +139,7 @@ article a {
 
 @media (min-width: 1024px) {
 
-    .news-center{
+    #news-center{
         width: 390px;
         height: auto;
     }
@@ -151,12 +152,23 @@ article a {
         align-items: flex-start;
     }
 
-    .news-center {
+    #publicity {
+        border-bottom: 3px solid black;
+    }
+
+    #logo {
+        border-bottom: 3px solid black;
+    }
+
+    #news-center {
         width: 50%;
+        border: 3px solid black;
     }
 
     #aside {
         width: 50%;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
     }
 
 }
