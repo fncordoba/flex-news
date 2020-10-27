@@ -168,15 +168,17 @@ article a {
     border-bottom-right-radius:75px; 
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 
-    #news-center{
-        width: 390px;
-        height: auto;
+    #wzlogo, #bplogo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
     .container {
         flex-direction: row;
@@ -189,6 +191,11 @@ article a {
 
     #logo {
         border-bottom: 3px solid black;
+    }
+
+    #wzlogo, #bplogo {
+        display: inline-flex;
+        flex-direction: column;
     }
 
     #news-center {
