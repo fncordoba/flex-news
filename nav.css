@@ -6,9 +6,9 @@
 }
 
 .menu {
+    display: none;
     position: absolute;
     width: 70%;
-    margin-left: -70%;
     margin-top: 50px;
     transition: all 1s;
     background:black;
@@ -25,7 +25,6 @@
 .nav .label-menu:hover {
 	cursor: pointer;
 	background: rgba(0,0,0,0.3);
-
 }
 
 .menu ul {
@@ -39,7 +38,6 @@
 .menu li {
     flex-grow: 1;
     border: 1px solid #fff;
-    
 }
 
 .menu li:hover {
@@ -60,13 +58,14 @@
 
 #btn-menu {
     display: none;
-    
 }
 
 #btn-menu:checked ~ .menu {
+    display: inline;
     margin: 0px;
     margin-top: 50px;
 }
+
 @media (min-width: 768px) {
 
     .menu {
