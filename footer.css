@@ -7,12 +7,35 @@ footer {
 
 #footer-list a {
     display: inline-block;
-    margin-right: 2%;
+    margin: 2%;
     color: blanchedalmond;
     border-right: groove 3px white; 
     border-bottom: groove 3px white; 
     border-radius: 50px;
     text-decoration: none;
+}
+
+#contacts {
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid white;
+}
+
+#contacts img {
+    width: 20%;
+    height: auto;
+    -moz-border-radius-topleft: 75px;
+    -moz-border-radius-topright:75px;
+    -moz-border-radius-bottomleft:75px;
+    -moz-border-radius-bottomright:75px;
+    -webkit-border-top-left-radius:75px;
+    -webkit-border-top-right-radius:75px;
+    -webkit-border-bottom-left-radius:75px;
+    -webkit-border-bottom-right-radius:75px;
+    border-top-left-radius:75px;
+    border-top-right-radius:75px;
+    border-bottom-left-radius:75px;
+    border-bottom-right-radius:75px; 
 }
 
 #contacts img {
