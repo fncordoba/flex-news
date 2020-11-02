@@ -64,3 +64,4 @@ function validateAddress(address) {
     var addressRegex = /^[\w-\.]+ ([\w-]+)$/g;
     return !(address.match(addressRegex) == null);
 }
+
