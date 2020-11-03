@@ -17,7 +17,7 @@ var submitKeys = {
         value: null,
         errorMessage: 'Must be at least 8 characters and count of letters and numbers.'
     },
-    "re-pass": {
+    repass: {
         status: false,
         value: null,
         errorMessage: 'Both passwords must be the same.'
@@ -55,10 +55,6 @@ var submitKeys = {
 }
 
 var alertMessage = ``;
-if (submitKeys.fullname.status) {
-    alertMessage = `${alertMessage} \n Fullname: ${submitKeys.fullname.value}`;
-}
-alert(alertMessage);
 
 function resetInput(e) {
     var element = document.getElementById(e.target.id);
@@ -67,12 +63,43 @@ function resetInput(e) {
 }
 
 function validateSubmit(e) {
-    if (submitKeys.fullname && submitKeys.email && submitKeys.pas && submitKeys.["re-pass"] && submitKeys.age && submitKeys.phone && submitKeys.address && submitKeys.city && submitKeys.post && submitKeys.dni) {
-        alert("successful submit")
+    e.preventDefault();
+    if (submitKeys.fullname.status && submitKeys.email.status && submitKeys.pass.status && submitKeys.repass.status && submitKeys.age.status && submitKeys.phone.status && submitKeys.address.status && submitKeys.city.status && submitKeys.post.status && submitKeys.dni.status) {
+        alert("Successful Submit");
     }else {
-        alert("")
+        var alertMessage = ``;
+        if (!submitKeys.fullname.status) {
+            alertMessage = `${alertMessage} \n Fullname: ${submitKeys.fullname.errorMessage}`;
+        }
+        if (!submitKeys.email.status) {
+            alertMessage = `${alertMessage} \n Email: ${submitKeys.email.errorMessage}`;
+        }
+        if (!submitKeys.pass.status) {
+            alertMessage = `${alertMessage} \n Password: ${submitKeys.pass.errorMessage}`;
+        }
+        if (!submitKeys.repass.status) {
+            alertMessage = `${alertMessage} \n Repeat Password: ${submitKeys.repass.errorMessage}`;
+        }
+        if (!submitKeys.age.status) {
+            alertMessage = `${alertMessage} \n Age: ${submitKeys.age.errorMessage}`;
+        }
+        if (!submitKeys.phone.status) {
+            alertMessage = `${alertMessage} \n Phone: ${submitKeys.phone.errorMessage}`;
+        }
+        if (!submitKeys.address.status) {
+            alertMessage = `${alertMessage} \n Address: ${submitKeys.address.errorMessage}`;
+        }
+        if (!submitKeys.city.status) {
+            alertMessage = `${alertMessage} \n City: ${submitKeys.city.errorMessage}`;
+        }
+        if (!submitKeys.post.status) {
+            alertMessage = `${alertMessage} \n Postal Code: ${submitKeys.post.errorMessage}`;
+        }
+        if (!submitKeys.dni.status) {
+            alertMessage = `${alertMessage} \n DNI: ${submitKeys.dni.errorMessage}`;
+        }
+        alert(alertMessage);
     }
-
 }
 
 function validateInput(e) {
@@ -84,14 +111,12 @@ function validateInput(e) {
             if (param) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
-                //modificar el valor de la propiedad fullname en el objeto submitKeys
                 submitKeys.fullname.status = true;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
                 submitKeys.fullname.status = false;
             }
-            submitKeys.fullname.value = e.target.value;
         break;
         case "email":
             var param = validateEmail(e.target.value);
@@ -125,11 +150,11 @@ function validateInput(e) {
             if(element.value === rePassElement.value) {
                 rePassElement.classList.remove('input-wrapper-wrong');
                 rePassElement.classList.add('input-wrapper-success');
-                submitKeys.["re-pass"].status = true;
+                submitKeys.repass.status = true;
             } else {
                 rePassElement.classList.remove('input-wrapper-success');
                 rePassElement.classList.add('input-wrapper-wrong');
-                submitKeys.["re-pass"].status = false;
+                submitKeys.repass.status = false;
             }
         break;
         case "age":
@@ -158,50 +183,58 @@ function validateInput(e) {
                 submitKeys.phone.status = false;
             }
         break;
-        // case "address":
-		// 	var param = validateAddress(e.target.value);
-        //     var element = document.getElementById("address");
-        //     if (param) {
-        //         element.classList.remove('input-wrapper-wrong');
-        //         element.classList.add('input-wrapper-success');
-        //     } else {
-        //         element.classList.remove('input-wrapper-success');
-        //         element.classList.add('input-wrapper-wrong');
-        //     }
-        // break;
-        // case "city":
-		// 	var param = validateCity(e.target.value);
-        //     var element = document.getElementById("city");
-        //     if (param) {
-        //         element.classList.remove('input-wrapper-wrong');
-        //         element.classList.add('input-wrapper-success');
-        //     } else {
-        //         element.classList.remove('input-wrapper-success');
-        //         element.classList.add('input-wrapper-wrong');
-        //     }
-        // break;
-        // case "postal":
-		// 	var param = validatePostal(e.target.value);
-        //     var element = document.getElementById("postal");
-        //     if (param) {
-        //         element.classList.remove('input-wrapper-wrong');
-        //         element.classList.add('input-wrapper-success');
-        //     } else {
-        //         element.classList.remove('input-wrapper-success');
-        //         element.classList.add('input-wrapper-wrong');
-        //     }
-        // break;
-        // case "dni":
-		// 	var param = validateDni(e.target.value);
-        //     var element = document.getElementById("dni");
-        //     if (param) {
-        //         element.classList.remove('input-wrapper-wrong');
-        //         element.classList.add('input-wrapper-success');
-        //     } else {
-        //         element.classList.remove('input-wrapper-success');
-        //         element.classList.add('input-wrapper-wrong');
-        //     }
-		// break;
+        case "address":
+			var param = validateAddress(e.target.value);
+            var element = document.getElementById("address");
+            if (param) {
+                element.classList.remove('input-wrapper-wrong');
+                element.classList.add('input-wrapper-success');
+                submitKeys.address.status = true;
+            } else {
+                element.classList.remove('input-wrapper-success');
+                element.classList.add('input-wrapper-wrong');
+                submitKeys.address.status = false;
+            }
+        break;
+        case "city":
+			var param = validateCity(e.target.value);
+            var element = document.getElementById("city");
+            if (param) {
+                element.classList.remove('input-wrapper-wrong');
+                element.classList.add('input-wrapper-success');
+                submitKeys.city.status = true;
+            } else {
+                element.classList.remove('input-wrapper-success');
+                element.classList.add('input-wrapper-wrong');
+                submitKeys.city.status = false;
+            }
+        break;
+        case "postal":
+			var param = validatePostal(e.target.value);
+            var element = document.getElementById("postal");
+            if (param) {
+                element.classList.remove('input-wrapper-wrong');
+                element.classList.add('input-wrapper-success');
+                submitKeys.post.status = true;
+            } else {
+                element.classList.remove('input-wrapper-success');
+                element.classList.add('input-wrapper-wrong');
+                submitKeys.post.status = false;
+            }
+        break;
+        case "dni":
+			var param = validateDni(e.target.value);
+            var element = document.getElementById("dni");
+            if (param) {
+                element.classList.remove('input-wrapper-wrong');
+                element.classList.add('input-wrapper-success');
+                submitKeys.dni.status = true;
+            } else {
+                element.classList.remove('input-wrapper-success');
+                element.classList.add('input-wrapper-wrong');
+                submitKeys.dni.status = false;
+            }
+		break;
 	}
 }
 
