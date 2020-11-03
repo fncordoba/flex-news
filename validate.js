@@ -10,7 +10,7 @@ function validateName(name) {
     if (!isStr(name)) {
         return false;
     }
-    name = name.trim();
+    name.trim();
     if (name.length < 6) {
         return false;
     }
