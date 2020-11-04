@@ -48,8 +48,11 @@ function validatePhone(phone) {
     if (!Number.parseInt(phone)) {
         return false;
     }
+    var characters = /^(?:(?!\ |\-|\(|\)).)+$/g;
+    if (phone.match(characters) == null) {
+        return false;
+    }
     var phoneRegex = /^[\d]{7,14}$/g;
-    
     return !(phone.match(phoneRegex) == null);
 }
 

@@ -65,7 +65,38 @@ function resetInput(e) {
 function validateSubmit(e) {
     e.preventDefault();
     if (submitKeys.fullname.status && submitKeys.email.status && submitKeys.pass.status && submitKeys.repass.status && submitKeys.age.status && submitKeys.phone.status && submitKeys.address.status && submitKeys.city.status && submitKeys.post.status && submitKeys.dni.status) {
-        alert("Successful Submit");
+        var alertValue = ``;
+        if (submitKeys.fullname.status) {
+            alertValue = `${alertValue} \n Fullname: ${submitKeys.fullname.value}`;
+        }
+        if (submitKeys.email.status) {
+            alertValue = `${alertValue} \n Email: ${submitKeys.email.value}`;
+        }
+        if (submitKeys.pass.status) {
+            alertValue = `${alertValue} \n Password: ${submitKeys.pass.value}`;
+        }
+        if (submitKeys.repass.status) {
+            alertValue = `${alertValue} \n Repeat Password: ${submitKeys.repass.value}`;
+        }
+        if (submitKeys.age.status) {
+            alertValue = `${alertValue} \n Age: ${submitKeys.age.value}`;
+        }
+        if (submitKeys.phone.status) {
+            alertValue = `${alertValue} \n Phone: ${submitKeys.phone.value}`;
+        }
+        if (submitKeys.address.status) {
+            alertValue = `${alertValue} \n Address: ${submitKeys.address.value}`;
+        }
+        if (submitKeys.city.status) {
+            alertValue = `${alertValue} \n City: ${submitKeys.city.value}`;
+        }
+        if (submitKeys.post.status) {
+            alertValue = `${alertValue} \n Postal Code: ${submitKeys.post.value}`;
+        }
+        if (submitKeys.dni.status) {
+            alertValue = `${alertValue} \n DNI: ${submitKeys.dni.value}`;
+        }
+        alert(alertValue);
     }else {
         var alertMessage = ``;
         if (!submitKeys.fullname.status) {
@@ -112,6 +143,7 @@ function validateInput(e) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
                 submitKeys.fullname.status = true;
+                submitKeys.fullname.value = e.target.value;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
@@ -125,6 +157,7 @@ function validateInput(e) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
                 submitKeys.email.status = true;
+                submitKeys.email.value = e.target.value;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
@@ -138,6 +171,7 @@ function validateInput(e) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
                 submitKeys.pass.status = true;
+                submitKeys.pass.value = e.target.value;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
@@ -151,6 +185,7 @@ function validateInput(e) {
                 rePassElement.classList.remove('input-wrapper-wrong');
                 rePassElement.classList.add('input-wrapper-success');
                 submitKeys.repass.status = true;
+                submitKeys.repass.value = e.target.value;
             } else {
                 rePassElement.classList.remove('input-wrapper-success');
                 rePassElement.classList.add('input-wrapper-wrong');
@@ -164,6 +199,7 @@ function validateInput(e) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
                 submitKeys.age.status = true;
+                submitKeys.age.value = e.target.value;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
@@ -177,6 +213,7 @@ function validateInput(e) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
                 submitKeys.phone.status = true;
+                submitKeys.phone.value = e.target.value;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
@@ -190,6 +227,7 @@ function validateInput(e) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
                 submitKeys.address.status = true;
+                submitKeys.address.value = e.target.value;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
@@ -203,6 +241,7 @@ function validateInput(e) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
                 submitKeys.city.status = true;
+                submitKeys.city.value = e.target.value;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
@@ -216,6 +255,7 @@ function validateInput(e) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
                 submitKeys.post.status = true;
+                submitKeys.post.value = e.target.value;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
@@ -229,6 +269,7 @@ function validateInput(e) {
                 element.classList.remove('input-wrapper-wrong');
                 element.classList.add('input-wrapper-success');
                 submitKeys.dni.status = true;
+                submitKeys.dni.value = e.target.value;
             } else {
                 element.classList.remove('input-wrapper-success');
                 element.classList.add('input-wrapper-wrong');
