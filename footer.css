@@ -7,12 +7,20 @@ footer {
 
 #footer-list a {
     display: inline-block;
+    width: 100px;
     margin: 2%;
     color: blanchedalmond;
     border-right: groove 3px white; 
     border-bottom: groove 3px white; 
     border-radius: 50px;
     text-decoration: none;
+}
+
+#footer-list a :hover {
+    color: black;
+    border-right: groove 3px black; 
+    border-bottom: groove 3px black; 
+    background-color: white;
 }
 
 #contacts {
