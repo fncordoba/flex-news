@@ -8,8 +8,8 @@ form {
 .input-wrapper {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     margin: 20px;
     padding: 2%;
     border: 1px solid black;
@@ -78,6 +78,11 @@ form {
     .form-inputs {
         display: flex;
         flex-direction: row;
+    }
+
+    .input-wrapper {
+        width: 200px;
+        height: 140px;
     }
 }
     
