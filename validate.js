@@ -49,6 +49,7 @@ function validatePhone(phone) {
         return false;
     }
     var phoneRegex = /^[\d]{7,14}$/g;
+    
     return !(phone.match(phoneRegex) == null);
 }
 
@@ -68,7 +69,7 @@ function validateCity(city) {
         return false;
     }
     name.trim();
-    var cityRegex = /^[\w-\.]+ ([\w-\ ]+)$/g;
+    var cityRegex = /^[\w-\ ]{3,}$/g;
     return !(city.match(cityRegex) == null);
 }
 
