@@ -65,6 +65,15 @@ form {
     background-color: bisque;
 }
 
+#title-container {
+    background-color: #3daeff;
+    text-align: center;
+}
+
+#title-container h1 {
+    margin: 0%;
+}
+
 @media (min-width: 1024px) {
     .form-inputs {
         display: flex;
